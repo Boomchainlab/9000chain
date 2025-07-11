@@ -1,6 +1,6 @@
 # 🚀 9000chain
 
-> Autonomous Hash Infrastructure. Designed for iSH iOS. Fueled by $CHONKPUMP9000. Operated by Boomchainlab.
+> Autonomous Hash Infrastructure. Designed for iSH iOS. Fueled by CHONKPUMP 9000. Operated by Boomchainlab.
 
 [![9000chain](https://img.shields.io/badge/Boomchain-Powered-blue.svg)](https://boomchainlab.com)
 [![GitHub](https://img.shields.io/github/license/Boomchainlab/9000chain)](https://github.com/Boomchainlab/9000chain)
