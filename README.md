@@ -17,7 +17,7 @@
 - 🔐 SHA-256 proof-of-upload log
 - 📁 Transparent `HASHES.md` ledger
 - ☁️ Auto-commit to GitHub for audit trail
-- 🔗 Integrated into $CHONKPUMP9000 ecosystem
+- 🔗 Integrated into CHONKPUMP 9000 ecosystem
 
 ---
 
