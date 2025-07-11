@@ -1,36 +1,32 @@
-# 9000chain
-iSH-powered CLI pipeline for hashing, verifying, and committing uploads to GitHub in the Boomchain ecosystem.
+# 🚀 9000chain
 
+> Autonomous Hash Infrastructure. Designed for iSH iOS. Fueled by $CHONKPUMP9000. Operated by Boomchainlab.
 
-# 🔗 9000chain
-
-A minimal Git-based hashing and verification pipeline designed for **iSH on iOS** and the Boomchain infrastructure.  
-Track file uploads, generate verifiable SHA-256 hashes, and commit the results directly to GitHub using secure automation.
+[![9000chain](https://img.shields.io/badge/Boomchain-Powered-blue.svg)](https://boomchainlab.com)
+[![GitHub](https://img.shields.io/github/license/Boomchainlab/9000chain)](https://github.com/Boomchainlab/9000chain)
 
 ---
 
-## 🚀 Features
-
-- 🧩 Auto-detect `.zip` uploads
-- 🔐 SHA-256 hashing & Git-based ledger
-- 📲 iSH iOS compatible
-- 🔁 GitHub push with PAT authentication
-- 📤 Works well with Boomchain projects (e.g. `CHONKPUMP 9000`, `contact-keys`)
+**9000chain** is a portable file-integrity auditing CLI designed to generate secure SHA-256 hashes for ZIP files, append them to a transparent `HASHES.md` ledger, and push commits to GitHub — all from your iPhone with [iSH](https://ish.app). It serves as an immutable file notarization layer for Web3.
 
 ---
 
-## 📁 Upload Flow
+### ✨ Features
 
-uploads/*.zip → tmp/ → HASHES.md → git commit → GitHub
+- ✅ One-liner setup on iSH for iOS
+- 🔐 SHA-256 proof-of-upload log
+- 📁 Transparent `HASHES.md` ledger
+- ☁️ Auto-commit to GitHub for audit trail
+- 🔗 Integrated into $CHONKPUMP9000 ecosystem
 
 ---
 
-## 🧰 Linear iSH Installation Script
+### ⚙️ One-Line Command (Paste in iSH)
 
 ```sh
 apk update && apk add --no-cache git unzip bash curl coreutils openssl jq && \
 mkdir -p uploads tmp && \
-printf "GITHUB_REPO=https://<username>:<your_PAT>@github.com/Boomchainlab/9000chain.git" > ~/.env && \
+printf "GITHUB_REPO=https://BoomchainLabs:<your_PAT>@github.com/Boomchainlab/9000chain.git" > ~/.env && \
 git config --global user.name "9000chain" && \
 git config --global user.email "support@boomchainlab.com" && \
 [ ! -d 9000chain ] && git clone "$(grep GITHUB_REPO ~/.env | cut -d '=' -f2-)" 9000chain && \
@@ -44,8 +40,19 @@ git commit -m "chore(hashes): update from iSH (9000chain)" || echo "⚠️ No ch
 git push --set-upstream origin master || echo "❌ Push failed — check GitHub token" && \
 rm -rf tmp .tmp_hash
 
+uploads/*.zip → tmp/ → HASHES.md → git commit → GitHub
 
+---
 Replace <username> and <your_PAT> with your actual GitHub credentials.
+
+
+📂 Folder Structure
+9000chain/
+├── uploads/            # Place .zip files here
+├── tmp/                # Temporary unzip path
+├── HASHES.md           # Proof log
+└── .env                # GitHub token config
+
 
 👨‍💻 Maintained by
 	•	Org: Boomchainlab
@@ -57,4 +64,4 @@ Replace <username> and <your_PAT> with your actual GitHub credentials.
 
 📄 License
 
-MIT © Boomchainlab
+MIT © Boomchainlab 2025
